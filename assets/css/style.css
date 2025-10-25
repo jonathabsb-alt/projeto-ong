@@ -157,3 +157,39 @@ footer p, footer address {
         justify-content: space-around;
     }
 }
+
+@media (min-width: 1200px) {
+    
+    
+    main {
+        max-width: 1140px; 
+        padding: 40px 0; 
+    }
+
+    
+    h1 {
+        font-size: 3rem; 
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+
+    footer {
+        
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+   
+   
+    #sobre, #contato {
+        display: grid;
+        grid-template-columns: 1fr 1fr;  
+        gap: 30px;
+    }
+
+    #sobre > h2, #contato > h2 {
+        grid-column: 1 / -1; 
+    }
+}

@@ -91,10 +91,49 @@ function configurarDetalhesProjeto() {
     });
 }
 
+function configurarValidacaoEmTempoReal() {
+    const emailInput = document.getElementById('email');
+    const emailErroSpan = document.getElementById('email-erro');
+
+    if (emailInput) {
+        
+        emailInput.addEventListener('input', () => {
+            
+            
+            if (emailInput.validity.valid) {
+                
+                emailErroSpan.textContent = '';
+            } else {
+                
+                if (emailInput.validity.valueMissing) {
+                    emailErroSpan.textContent = 'O campo E-mail é obrigatório.';
+                } else if (emailInput.validity.typeMismatch) {
+                    emailErroSpan.textContent = 'Por favor, insira um endereço de e-mail válido.';
+                } else {
+                    emailErroSpan.textContent = 'E-mail inválido.';
+                }
+            }
+        });
+        
+        
+        const cpfInput = document.getElementById('cpf');
+        if (cpfInput) {
+            cpfInput.addEventListener('input', () => {
+                if (!cpfInput.validity.valid && cpfInput.value.length > 0) {
+                    cpfInput.setCustomValidity("Formato de CPF deve ser 000.000.000-00.");
+                } else {
+                    cpfInput.setCustomValidity(""); 
+                }
+            });
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM totalmente carregado e pronto para a interação.");
     aplicarMascaras();
     atualizarProgressoCampanha();
     configurarDetalhesProjeto();
+    configurarValidacaoEmTempoReal();
 });
 

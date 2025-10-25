@@ -299,3 +299,11 @@ button[type="submit"]:hover {
     font-weight: bold;
     color: var(--cor-primaria);
 }
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
+
+input:valid:not(:placeholder-shown) {
+    border: 2px solid green;
+}

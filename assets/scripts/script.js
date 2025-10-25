@@ -42,8 +42,38 @@ function aplicarMascaras() {
     }
 }
 
+function atualizarProgressoCampanha() {
+    
+    const meta = 10000; 
+    
+    
+    const valorArrecadado = 7350; 
+
+    
+    let porcentagem = (valorArrecadado / meta) * 100;
+    if (porcentagem > 100) porcentagem = 100;
+
+    
+    const formatarBRL = (valor) => valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+    
+    const metaElemento = document.getElementById('meta-valor');
+    const arrecadadoElemento = document.getElementById('arrecadado-valor');
+    const barraProgresso = document.getElementById('progresso-preenchimento');
+    const porcentagemElemento = document.getElementById('progresso-porcentagem');
+
+    if (metaElemento && arrecadadoElemento && barraProgresso && porcentagemElemento) {
+        metaElemento.textContent = formatarBRL(meta);
+        arrecadadoElemento.textContent = formatarBRL(valorArrecadado);
+
+        barraProgresso.style.width = porcentagem.toFixed(2) + '%';
+        porcentagemElemento.textContent = porcentagem.toFixed(2) + '% concluído';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM totalmente carregado e pronto para a interação.");
     aplicarMascaras();
+    atualizarProgressoCampanha()
 });
 

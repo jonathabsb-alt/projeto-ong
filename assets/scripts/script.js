@@ -71,9 +71,30 @@ function atualizarProgressoCampanha() {
     }
 }
 
+function configurarDetalhesProjeto() {
+    const botoesToggle = document.querySelectorAll('.toggle-detalhes');
+
+    botoesToggle.forEach(botao => {
+        botao.addEventListener('click', (e) => {
+            const idProjeto = e.target.getAttribute('data-target');
+            
+            const projetoDetalhes = document.getElementById(idProjeto).querySelector('.projeto-detalhes');
+            
+            if (projetoDetalhes.style.display === 'none') {
+                projetoDetalhes.style.display = 'block';
+                e.target.textContent = 'Ocultar Detalhes';
+            } else {
+                projetoDetalhes.style.display = 'none';
+                e.target.textContent = 'Ver Mais Detalhes';
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM totalmente carregado e pronto para a interação.");
     aplicarMascaras();
-    atualizarProgressoCampanha()
+    atualizarProgressoCampanha();
+    configurarDetalhesProjeto();
 });
 

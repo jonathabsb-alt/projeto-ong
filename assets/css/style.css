@@ -279,3 +279,31 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #1e7e34; 
 }
+
+.barra-progresso {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin: 15px 0;
+    height: 30px;
+    overflow: hidden; 
+}
+
+#progresso-preenchimento {
+    height: 100%;
+    background-color: var(--cor-secundaria); 
+    transition: width 0.5s ease-in-out; 
+}
+
+#progresso-porcentagem {
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
+
+input:valid:not(:placeholder-shown) {
+    border: 2px solid green;
+}

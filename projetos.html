@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos e Ações | Nome da ONG</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/scripts/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,15 +23,31 @@
 
         <section id="projetos-atuais">
             <h2>Conheça Nossas Iniciativas</h2>
-            <article>
+            <article class="projeto-item" id="projeto-a">
                 <h3>Projeto A: Educação Digital</h3>
-                <p>Foco e impacto do projeto. Indicadores de impacto e resultados[cite: 40].</p>
+                <p>Foco e impacto do projeto. Indicadores de impacto e resultados.</p>
+                
+                <div class="projeto-detalhes" style="display: none;">
+                    <p><strong>Detalhes Avançados:</strong> O projeto já impactou 500 alunos e busca 10 novos voluntários para o próximo trimestre.</p>
+                    <p>Indicadores: 80% dos participantes ingressaram no mercado de trabalho.</p>
+                </div>
+                
+                <button class="toggle-detalhes" data-target="projeto-a">Ver Mais Detalhes</button>
+                
                 <img src="assets/images/ong_teste.jpeg" alt="Voluntários ensinando em um laboratório de informática">
             </article>
-            <article>
+
+            <article class="projeto-item" id="projeto-b">
                 <h3>Projeto B: Apoio Comunitário</h3>
                 <p>Foco e impacto do projeto.</p>
+                
+                <div class="projeto-detalhes" style="display: none;">
+                    <p><strong>Detalhes Avançados:</strong> Entregamos 200 cestas básicas no último mês e pretendemos dobrar a meta.</p>
+                </div>
+                
+                <button class="toggle-detalhes" data-target="projeto-b">Ver Mais Detalhes</button>
             </article>
+            
         </section>
 
         <section id="voluntariado">
@@ -41,8 +58,18 @@
 
         <section id="doacoes">
             <h2>Faça Sua Doação</h2>
-            <p>Sua doação on-line [cite: 35, 44] é fundamental para que possamos manter e expandir nossas campanhas de arrecadação [cite: 44] e projetos.</p>
-            <p>Acompanhe o progresso em tempo real e os relatórios de prestação de contas[cite: 44, 45].</p>
+            <p>Sua doação on-line é fundamental para que possamos manter e expandir nossas campanhas de arrecadação...</p>
+            
+            <div class="meta-campanha">
+                <h3>Campanha Atual: Construção da Nova Sede</h3>
+                <p>Meta: R$ <span id="meta-valor">10.000,00</span></p>
+                <p>Arrecadado: R$ <span id="arrecadado-valor">0,00</span></p>
+                
+                <div class="barra-progresso">
+                    <div id="progresso-preenchimento" style="width: 0%;"></div>
+                </div>
+                <p id="progresso-porcentagem">0% concluído</p>
+            </div>
         </section>
     </main>
 

@@ -1,0 +1,26 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+:root {
+    
+    --cor-primaria: #007bff;     
+    --cor-secundaria: #28a745;  
+    --cor-fundo: #f8f9fa;      
+    --cor-texto-principal: #343a40; 
+    --cor-texto-claro: #ffffff;
+    
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-base: 16px;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}

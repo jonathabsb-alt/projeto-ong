@@ -329,3 +329,21 @@ input:valid:not(:placeholder-shown) {
     border-radius: 4px;
     width: 100%;
 }
+
+.btn-voluntario {
+    display: inline-block; 
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-texto-claro);
+    padding: 15px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.btn-voluntario:hover {
+    background-color: #1e7e34; 
+}

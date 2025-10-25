@@ -120,3 +120,40 @@ footer p, footer address {
     margin: 5px 0;
     font-size: 0.9rem;
 }
+
+/* Commit #4: Media Query para Tablets (min-width: 768px) */
+@media (min-width: 768px) {
+    
+    /* 1. Ajuste do Container Principal */
+    main {
+        /* Centraliza o conteúdo e limita a largura para melhor legibilidade */
+        max-width: 900px; 
+        margin: 0 auto;
+        padding: 30px; 
+    }
+
+    /* 2. Ajuste da Tipografia */
+    h1 {
+        font-size: 2.5rem; /* Aumenta o título principal */
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #projetos-atuais {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 25px;
+        margin-top: 20px;
+    }
+    
+   
+    footer {
+        grid-template-columns: 1fr 1fr; 
+        text-align: left;
+    }
+    header {
+        justify-content: space-around;
+    }
+}

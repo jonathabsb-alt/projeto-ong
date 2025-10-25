@@ -71,6 +71,58 @@
                 <p id="progresso-porcentagem">0% concluído</p>
             </div>
         </section>
+
+        <section id="cadastro-projeto">
+            <h2>Cadastro de Novo Projeto</h2>
+            <p>Área administrativa: formulário para o Administrador da ONG cadastrar e editar projetos, indicadores e mídias.</p>
+            
+            <form action="#" method="POST" class="formulario-projeto">
+                <fieldset>
+                    <legend>Detalhes do Projeto</legend>
+                    
+                    <div>
+                        <label for="titulo-projeto">Título do Projeto:</label>
+                        <input type="text" id="titulo-projeto" name="titulo-projeto" required>
+                    </div>
+                    
+                    <div>
+                        <label for="descricao-projeto">Descrição Detalhada:</label>
+                        <textarea id="descricao-projeto" name="descricao-projeto" rows="5" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="categoria">Categoria:</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Selecione a Categoria</option>
+                            <option value="educacao">Educação</option>
+                            <option value="saude">Saúde</option>
+                            <option value="meio-ambiente">Meio Ambiente</option>
+                            <option value="suporte-comunitario">Suporte Comunitário</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="meta-projeto">Meta de Arrecadação (R$):</label>
+                        <input type="number" id="meta-projeto" name="meta-projeto" step="0.01" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mídias e Indicadores</legend>
+                    <div>
+                        <label for="fotos">Fotos/Galeria:</label>
+                        <input type="file" id="fotos" name="fotos" multiple accept="image/*">
+                    </div>
+                    
+                    <div>
+                        <label for="indicador-chave">Indicador de Impacto (Ex: N° de pessoas atendidas):</label>
+                        <input type="text" id="indicador-chave" name="indicador-chave" placeholder="Ex: 500 Pessoas Atendidas">
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Cadastrar/Atualizar Projeto</button>
+            </form>
+        </section>
     </main>
 
     <footer>

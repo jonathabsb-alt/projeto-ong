@@ -350,14 +350,14 @@ input:valid:not(:placeholder-shown) {
 
 .carousel-container {
     display: flex;
-    align-items: stretch; /* Garante que o wrapper se estique com a altura dos botões */
+    align-items: stretch; 
     justify-content: space-between;
     margin: 40px 0;
 }
 
 .carousel-wrapper {
     flex-grow: 1; 
-    padding: 0 30px; /* Mais espaço interno para os slides */
+    padding: 0 30px; 
     overflow: hidden;
 }
 
@@ -367,41 +367,41 @@ input:valid:not(:placeholder-shown) {
     background-color: var(--cor-texto-claro);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o slide */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     text-align: left;
-    min-height: 400px; /* Altura mínima para evitar que o slide mude de tamanho drasticamente */
+    min-height: 400px; 
+
 }
 
-/* Alinhamento dentro do slide */
 .carousel-slide img {
     margin: 15px 0;
     max-height: 200px;
     object-fit: cover;
-    width: 100%; /* Garante que a imagem se ajuste */
+    width: 100%; 
 }
 
-/* Estilo dos Botões de Navegação (Anterior/Próximo) */
+
 .carousel-btn {
     background-color: var(--cor-primaria);
     color: var(--cor-texto-claro);
     border: none;
     padding: 12px 18px; 
     cursor: pointer;
-    border-radius: 50%; /* Transforma o botão em círculo para um design mais moderno */
+    border-radius: 50%; 
     font-size: 1.2rem;
     font-weight: bold;
     min-width: 50px;
     height: 50px;
-    margin-top: 100px; /* Move o botão para o meio da altura (ajuste manual) */
+    margin-top: 100px; 
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .carousel-btn:hover {
     background-color: #0056b3;
-    transform: scale(1.05); /* Pequena animação ao passar o mouse */
+    transform: scale(1.05); 
 }
 
-/* Estilo do Botão de Detalhes (usabilidade) */
+
 .toggle-detalhes {
     background-color: var(--cor-secundaria);
     color: var(--cor-texto-claro);
@@ -418,12 +418,11 @@ input:valid:not(:placeholder-shown) {
     background-color: #1e7e34;
 }
 
-/* Mantém a visibilidade do detalhe como bloco */
 .projeto-detalhes {
     padding: 10px;
     border-left: 3px solid var(--cor-primaria);
     margin: 15px 0;
-    background-color: #f0f8ff; /* Fundo leve para o detalhe */
+    background-color: #f0f8ff; 
 }
 
 @media (min-width: 768px) {

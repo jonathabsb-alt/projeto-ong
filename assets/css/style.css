@@ -121,20 +121,20 @@ footer p, footer address {
     font-size: 0.9rem;
 }
 
-/* Commit #4: Media Query para Tablets (min-width: 768px) */
+
 @media (min-width: 768px) {
     
-    /* 1. Ajuste do Container Principal */
+    
     main {
-        /* Centraliza o conteúdo e limita a largura para melhor legibilidade */
+        
         max-width: 900px; 
         margin: 0 auto;
         padding: 30px; 
     }
 
-    /* 2. Ajuste da Tipografia */
+    
     h1 {
-        font-size: 2.5rem; /* Aumenta o título principal */
+        font-size: 2.5rem; 
     }
 
     h2 {
@@ -155,6 +155,30 @@ footer p, footer address {
     }
     header {
         justify-content: space-around;
+    }
+
+    fieldset {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 30px; 
+    }
+
+    
+    #endereco, #nome {
+        grid-column: 1 / -1; 
+    }
+
+    
+    form div:last-child {
+        grid-column: 1 / -1;
+        display: block; 
+    }
+    
+    button[type="submit"] {
+        max-width: 300px;
+        margin: 10px auto; 
+        display: block;
     }
 }
 
@@ -192,4 +216,66 @@ footer p, footer address {
     #sobre > h2, #contato > h2 {
         grid-column: 1 / -1; 
     }
+}
+
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--cor-texto-claro);
+}
+
+fieldset {
+    border: 1px solid var(--cor-primaria);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    padding: 0 10px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="date"],
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34; 
 }

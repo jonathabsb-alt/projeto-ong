@@ -24,31 +24,49 @@
 
         <section id="projetos-atuais">
             <h2>Conheça Nossas Iniciativas</h2>
-            <article class="projeto-item" id="projeto-a">
-                <h3>Projeto A: Educação Digital</h3>
-                <p>Foco e impacto do projeto. Indicadores de impacto e resultados.</p>
-                
-                <div class="projeto-detalhes" style="display: none;">
-                    <p><strong>Detalhes Avançados:</strong> O projeto já impactou 500 alunos e busca 10 novos voluntários para o próximo trimestre.</p>
-                    <p>Indicadores: 80% dos participantes ingressaram no mercado de trabalho.</p>
-                </div>
-                
-                <button class="toggle-detalhes" data-target="projeto-a">Ver Mais Detalhes</button>
-                
-                <img src="assets/images/ong_teste.jpeg" alt="Voluntários ensinando em um laboratório de informática">
-            </article>
-
-            <article class="projeto-item" id="projeto-b">
-                <h3>Projeto B: Apoio Comunitário</h3>
-                <p>Foco e impacto do projeto.</p>
-                
-                <div class="projeto-detalhes" style="display: none;">
-                    <p><strong>Detalhes Avançados:</strong> Entregamos 200 cestas básicas no último mês e pretendemos dobrar a meta.</p>
-                </div>
-                
-                <button class="toggle-detalhes" data-target="projeto-b">Ver Mais Detalhes</button>
-            </article>
             
+            <div class="carousel-container">
+                
+                <button id="prev-projeto" class="carousel-btn">Anterior</button>
+                
+                <div class="carousel-wrapper">
+                    
+                    <article class="projeto-item carousel-slide" id="projeto-a">
+                        <h3>Projeto A: Educação Digital</h3>
+                        <p>Foco e impacto do projeto. Indicadores de impacto e resultados.</p>
+                        
+                        <div class="projeto-detalhes" style="display: none;">
+                            <p><strong>Detalhes Avançados:</strong> O projeto já impactou 500 alunos e busca 10 novos voluntários para o próximo trimestre.</p>
+                            <p>Indicadores: 80% dos participantes ingressaram no mercado de trabalho.</p>
+                        </div>
+                        
+                        <button class="toggle-detalhes" data-target="projeto-a">Ver Mais Detalhes</button>
+                        
+                        <img src="assets/images/ong_teste.jpeg" alt="Voluntários ensinando em um laboratório de informática" loading="lazy">
+                    </article>
+
+                    <article class="projeto-item carousel-slide" id="projeto-b">
+                        <h3>Projeto B: Apoio Comunitário</h3>
+                        <p>Foco e impacto do projeto.</p>
+                        
+                        <div class="projeto-detalhes" style="display: none;">
+                            <p><strong>Detalhes Avançados:</strong> Entregamos 200 cestas básicas no último mês e pretendemos dobrar a meta.</p>
+                        </div>
+                        
+                        <button class="toggle-detalhes" data-target="projeto-b">Ver Mais Detalhes</button>
+                    </article>
+
+                    <article class="projeto-item carousel-slide" id="projeto-c" style="display: none;">
+                        <h3>Projeto C: Saúde Comunitária</h3>
+                        <p>Foco em campanhas de vacinação e atendimento básico em áreas carentes.</p>
+                        <button class="toggle-detalhes" data-target="projeto-c">Ver Mais Detalhes</button>
+                    </article>
+                    
+                </div>
+                
+                <button id="next-projeto" class="carousel-btn">Próximo</button>
+                
+            </div>
         </section>
 
         <section id="voluntariado">

@@ -199,6 +199,48 @@ function configurarValidacaoValorDoacao() {
     }
 }
 
+function configurarCarrosselProjetos() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const btnPrev = document.getElementById('prev-projeto');
+    const btnNext = document.getElementById('next-projeto');
+    let currentIndex = 0;
+
+    if (slides.length === 0 || !btnPrev || !btnNext) return; 
+
+    
+    function showSlide(index) {
+        
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+        
+        
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+        
+        
+        slides[currentIndex].style.display = 'block';
+    }
+    
+    
+    btnNext.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    btnPrev.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    
+    showSlide(0); 
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM totalmente carregado e pronto para a interação.");
     aplicarMascaras();
@@ -207,5 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarValidacaoEmTempoReal();
     configurarDoacao();
     configurarValidacaoValorDoacao();
+    configurarCarrosselProjetos();
 });
 

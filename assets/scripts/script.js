@@ -29,9 +29,13 @@ function aplicarMascaras() {
     const cpfInput = document.getElementById('cpf');
     const telInput = document.getElementById('telefone');
     const cepInput = document.getElementById('cep');
+    const cartaoInput = document.getElementById('numero-cartao');
 
     if (cpfInput)  mascararCampo(cpfInput,  '###.###.###-##');    
     if (cepInput)  mascararCampo(cepInput,  '#####-###');          
+    if (cartaoInput) {
+        mascararCampo(cartaoInput, '#### #### #### ####'); 
+    }
 
     if (telInput) {
         
@@ -129,11 +133,122 @@ function configurarValidacaoEmTempoReal() {
     }
 }
 
+function configurarDoacao() {
+    const formDoacao = document.getElementById('form-doacao');
+
+    if (formDoacao) {
+        formDoacao.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            
+            if (!formDoacao.checkValidity()) {
+                formDoacao.reportValidity();
+                return;
+            }
+
+            
+            const valorInput = document.getElementById('valor-doacao');
+            const valor = parseFloat(valorInput.value);
+            
+            if (isNaN(valor) || valor < 5) {
+                alert('O valor mínimo para doação é de R$ 5,00. Por favor, ajuste o valor.');
+                valorInput.focus();
+                return;
+            }
+
+            
+            const valorFormatado = valor.toLocaleString('pt-BR', { 
+                minimumFractionDigits: 2, 
+                maximumFractionDigits: 2 
+            });
+            
+            alert(`🎉 Doação de R$ ${valorFormatado} efetuada com sucesso! \n\nMuito obrigado por seu apoio!`);
+            
+            
+            formDoacao.reset();
+        });
+    }
+}
+
+function configurarValidacaoValorDoacao() {
+    const valorInput = document.getElementById('valor-doacao');
+    const valorErroSpan = document.getElementById('valor-erro');
+    const valorMinimo = 5;
+
+    if (valorInput) {
+        valorInput.addEventListener('input', () => {
+            const valor = parseFloat(valorInput.value);
+
+
+            if (valorInput.validity.valid) {
+
+                if (valor < valorMinimo && valorInput.value.length > 0) {
+                    valorErroSpan.textContent = `O valor mínimo para doação é R$ ${valorMinimo.toFixed(2).replace('.', ',')}.`;
+                    valorInput.style.border = '2px solid red'; 
+                    valorErroSpan.textContent = '';
+                    valorInput.style.border = ''; 
+                }
+            } else {
+                
+                if (valorInput.validity.valueMissing) {
+                    valorErroSpan.textContent = 'Este campo é obrigatório.';
+                } else if (valorInput.validity.badInput) {
+                     valorErroSpan.textContent = 'Por favor, insira um número válido.';
+                }
+            }
+        });
+    }
+}
+
+function configurarCarrosselProjetos() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const btnPrev = document.getElementById('prev-projeto');
+    const btnNext = document.getElementById('next-projeto');
+    let currentIndex = 0;
+
+    if (slides.length === 0 || !btnPrev || !btnNext) return; 
+
+    
+    function showSlide(index) {
+        
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+        
+        
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+        
+        
+        slides[currentIndex].style.display = 'block';
+    }
+    
+    
+    btnNext.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    btnPrev.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    
+    showSlide(0); 
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM totalmente carregado e pronto para a interação.");
     aplicarMascaras();
     atualizarProgressoCampanha();
     configurarDetalhesProjeto();
     configurarValidacaoEmTempoReal();
+    configurarDoacao();
+    configurarValidacaoValorDoacao();
+    configurarCarrosselProjetos();
 });
 

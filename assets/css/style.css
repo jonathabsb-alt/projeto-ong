@@ -21,11 +21,6 @@
 body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
-    /* Teste imagem de fundo */
-    /* background-image: url('../images/ong_teste.jpeg'); */
-    /* background-repeat: no-repeat;       /* Prevents tiling */
-    /* background-position: center;        Centers the image */
-    /* background-size: cover;  */ 
     color: var(--cor-texto-principal);
     line-height: 1.6;
 }
@@ -285,7 +280,7 @@ button[type="submit"]:hover {
     background-color: #e9ecef;
     border-radius: 5px;
     margin: 15px 0;
-    height: 30px;
+    height: 15px;
     overflow: hidden; 
 }
 
@@ -331,17 +326,18 @@ input:valid:not(:placeholder-shown) {
 }
 
 .btn-voluntario {
-    display: inline-block; 
+    display: block; 
     background-color: var(--cor-secundaria); 
     color: var(--cor-texto-claro);
     padding: 15px 30px;
-    margin-top: 20px;
+    margin: 20px auto 0; 
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-size: 0.9rem;
     text-align: center;
-    font-size: 1.1rem;
+    width: fit-content;  
 }
 
 .btn-voluntario:hover {
@@ -352,12 +348,12 @@ input:valid:not(:placeholder-shown) {
     display: flex;
     align-items: stretch; 
     justify-content: space-between;
-    margin: 40px 0;
+    margin: 10px 0;
 }
 
 .carousel-wrapper {
     flex-grow: 1; 
-    padding: 0 30px; 
+    padding: 0 10px; 
     overflow: hidden;
 }
 
@@ -365,19 +361,20 @@ input:valid:not(:placeholder-shown) {
     width: 100%;
     display: none;
     background-color: var(--cor-texto-claro);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
     text-align: left;
-    min-height: 400px; 
+    min-height: 250px; 
 
 }
 
 .carousel-slide img {
-    margin: 15px 0;
-    max-height: 200px;
-    object-fit: cover;
-    width: 100%; 
+    display: block;         
+    margin: 15px auto;     
+    max-height: 200px;      
+    width: 30%;             
+    object-fit: contain;    
 }
 
 
@@ -385,10 +382,10 @@ input:valid:not(:placeholder-shown) {
     background-color: var(--cor-primaria);
     color: var(--cor-texto-claro);
     border: none;
-    padding: 12px 18px; 
+    padding: 0px 0px; 
     cursor: pointer;
     border-radius: 50%; 
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     font-weight: bold;
     min-width: 50px;
     height: 50px;
@@ -397,7 +394,7 @@ input:valid:not(:placeholder-shown) {
 }
 
 .carousel-btn:hover {
-    background-color: #0056b3;
+    background-color: #323ffc;
     transform: scale(1.05); 
 }
 
@@ -425,8 +422,15 @@ input:valid:not(:placeholder-shown) {
     background-color: #f0f8ff; 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
     #projetos-atuais {
         display: block; 
     }
+}
+#capa-principal {
+    display: block;         
+    margin: 0 auto;          
+    width: 350px;            
+    height: 250px;          
+    object-fit: contain;     
 }

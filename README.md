@@ -1,11 +1,11 @@
-# 🧩 Plataforma Web para ONGs - [Nome da ONG]
+#  Plataforma Web para ONGs - [Caminhos Abertos]
 
 
-## 🎯 Contexto e Objetivo Geral
+##  Contexto e Objetivo Geral
 
 Este projeto foi desenvolvido como plataforma web completa e profissional para uma ONG, aplicando, de forma integrada, todos os conceitos de Front-End. O objetivo é permitir à organização gerenciar atividades, divulgar projetos, captar recursos e engajar voluntários.
 
-## 🛠️ Tecnologias e Ferramentas
+##  Tecnologias e Ferramentas
 
 O projeto é baseado em tecnologias Front-End puras, priorizando desempenho e simplicidade:
 
@@ -15,7 +15,7 @@ O projeto é baseado em tecnologias Front-End puras, priorizando desempenho e si
 * **Versionamento:** Git e GitHub (Versionamento e Infraestrutura Web).
 * **Metodologia:** Kanban (Simulação de gestão ágil).
 
-## 📁 Estrutura de Arquivos e Funções
+##  Estrutura de Arquivos e Funções
 
 | Arquivo/Pasta | Tipo | Descrição e Funcionalidades |
 | :--- | :--- | :--- |
@@ -41,7 +41,7 @@ O projeto cobriu de forma prática todos os objetivos definidos na disciplina:
 5.  **Metodologias Ágeis:** Simulação de ambiente profissional através do versionamento por *commits* e do arquivo `KANBAN.md`.
 6.  **Documentação:** Produção de documentação técnica de qualidade profissional (`README.md`).
 
-## 🚀 Como Executar o Projeto
+##  Como Executar o Projeto
 
 1.  **Clone o Repositório:** `git clone https://github.com/jonathabsb-alt/projeto-ong.git`
 2.  **Abra o Arquivo:** Abra `index.html` no seu navegador favorito.

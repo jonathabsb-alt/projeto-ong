@@ -48,10 +48,10 @@ function aplicarMascaras() {
 
 function atualizarProgressoCampanha() {
     
-    const meta = 10000; 
+    const meta = 800000; 
     
     
-    const valorArrecadado = 7350; 
+    const valorArrecadado = 405350; 
 
     
     let porcentagem = (valorArrecadado / meta) * 100;
@@ -251,4 +251,3 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarValidacaoValorDoacao();
     configurarCarrosselProjetos();
 });
-

@@ -51,7 +51,7 @@ function atualizarProgressoCampanha() {
     const meta = 800000; 
     
     
-    const valorArrecadado = 407350; 
+    const valorArrecadado = 405350; 
 
     
     let porcentagem = (valorArrecadado / meta) * 100;
@@ -251,4 +251,3 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarValidacaoValorDoacao();
     configurarCarrosselProjetos();
 });
-
